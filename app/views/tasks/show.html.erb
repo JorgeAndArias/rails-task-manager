@@ -3,7 +3,7 @@
 <p class="text-secondary"><%= @task.details %></p>
 
 <%= form_for(@task) do |f| %>
-  <%= f.check_box :completed, class: "text-secondary" %>
+  <%= f.check_box :completed %>
   <%= f.label "Task finished?" %>
 <% end %>
 
