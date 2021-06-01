@@ -1,0 +1,15 @@
+<h3 class="text-dark"><%= @task.title %></h3>
+
+<p class="text-secondary"><%= @task.details %></p>
+
+<%= form_for(@task) do |f| %>
+  <%= f.check_box :completed, class: "text-secondary" %>
+  <%= f.label "Task finished?" %>
+<% end %>
+
+<%= link_to edit_task_path(@task) do%>
+  <i class="fas fa-edit"></i>
+  Edit this task
+<% end %>
+<br>
+<%= link_to "Back to tasks", tasks_path %>
